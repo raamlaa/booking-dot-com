@@ -1,4 +1,4 @@
-export type Listing = {
+export type Listings = {
     url: string;
     title:string;
     rating: string | null;
@@ -11,7 +11,7 @@ export type Listing = {
 
 export type Result = {
     content: {
-        listing: Listing[];
+        listings: Listings[];
         total_listings: string;
     }
 }

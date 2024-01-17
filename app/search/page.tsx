@@ -42,7 +42,7 @@ async function SearchPage({ searchParams }: Props) {
         </h3>
 
         <div className="space-y-2 mt-5">
-          {results.content.listing.map((item, i) => (
+          {results.content.listings.map((item, i) => (
             <div
               key={i}
               className="flex space-y-2 justify-between space-x-4 p-5 border rounded-lg"
@@ -56,7 +56,7 @@ async function SearchPage({ searchParams }: Props) {
               <div className="flex flex-1 space-x-5 justify-between">
                 <div>
                   <Link
-                    href={item.link}
+                    href={item.url}
                     className="font-bold text-blue-500 hover:text-blue-600 hover:underline"
                   >
                     {item.title}

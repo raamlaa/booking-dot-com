@@ -1,7 +1,7 @@
-import { searchParams } from "@/app/search/page";
+import { SearchParams } from "@/app/search/page";
 import { Result } from "@/typings";
 
-export async function fetchResults(searchParams: searchParams){
+export async function fetchResults(searchParams: SearchParams){
     const username=process.env.OXYLABS_USERNAME
     const password=process.env.OXYLABS_PASSWORD
 
@@ -9,7 +9,7 @@ export async function fetchResults(searchParams: searchParams){
     Object.keys(searchParams).forEach((key)=>{
         if (key ==="url" || key ==="location") return 
 
-        const value = searchParams[key as keyof searchParams];
+        const value = searchParams[key as keyof SearchParams];
 
         if (typeof value ==="string"){
             url.searchParams.append(key, value)
