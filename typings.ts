@@ -1,17 +1,18 @@
-export type Listings = {
+export type Listing = {
     url: string;
-    title:string;
+    title: string;
     rating: string | null;
     description: string;
-    price: string ; 
+    price: string;
+    link: string;
     booking_metadata: string;
     rating_word: string;
     rating_count: string | null;
-    }
-
-export type Result = {
+  };
+  
+  export type Result = {
     content: {
-        listings: Listings[];
-        total_listings: string;
-    }
-}
+      listings: Listing[];
+      total_listings: string;
+    };
+  };
