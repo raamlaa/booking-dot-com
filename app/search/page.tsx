@@ -56,7 +56,8 @@ async function SearchPage({ searchParams }: Props) {
               <div className="flex flex-1 space-x-5 justify-between">
                 <div>
                   <Link
-                    href={item.url}
+                    href={item.link}
+                    target="_blank"
                     className="font-bold text-blue-500 hover:text-blue-600 hover:underline"
                   >
                     {item.title}
